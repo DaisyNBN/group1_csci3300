@@ -1,0 +1,214 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and Main Styling */
+body {
+    font-family: 'Lexend', sans-serif; 
+    color: #333; 
+    background-color: #fdf2dc; 
+    overflow-x: hidden;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 32px;
+}
+
+.logo-icon {
+    font-size: 32px;
+    color: #333;
+    margin-right: 8px;
+}
+
+/* Main Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+/* Search Bar Styling */
+.search-container {
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* Outer search box */
+.search-box { 
+    display: flex;
+    align-items: center;
+    border: 2px solid #333; 
+    border-radius: 20px; 
+    padding: 5px 10px;
+    width: 300px;
+    background-color: #fdf2dc; 
+}
+
+/* Inner search box */
+.search-box input[type="text"] { 
+    border: none; 
+    outline: none;
+    font-size: 18px;
+    flex-grow: 1;
+    font-family: 'Lexend', sans-serif;
+    background-color: #fdf2dc; 
+    color: #333; 
+}
+
+/* Styling for the Bottom Background Image */
+.bottom-image {
+    display: block;
+    max-width: 100%;
+    
+    margin: 20px auto 0 auto; 
+}
+
+.material-icons {
+    font-size: 24px; 
+    color: #333;
+    margin-right: 8px; 
+}
+
+/* Main Tagline Styling */
+.tagline {
+    font-family: 'Sigmar One', cursive; 
+    font-weight: bold;
+    font-size: 36px; 
+    margin: 40px 0 10px;
+    margin-top: 100px;
+}
+
+.subtagline {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* Get Started Button Styling */
+.get-started {
+    background-color: #c48b35; 
+    color: #333;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Lexend', sans-serif; 
+}
+
+.get-started:hover {
+    background-color: #a4742d;
+}
+
+/* Title Styling for the Next Section */
+.next-section-title {
+    font-family: 'Sigmar One', cursive;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+/* Styling for the Next Section Search Bar */
+.search-container-next {
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.next-section {
+    min-height: 100vh; 
+    padding: 40px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fdf2dc; 
+    font-size: 24px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.search-box-next {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333; 
+    border-radius: 20px; 
+    padding: 10px 15px;
+    width: 500px;
+    background-color: #fdf2dc; 
+}
+
+.search-box-next input[type="text"] {
+    border: none; 
+    outline: none;
+    font-size: 20px;
+    flex-grow: 1;
+    font-family: 'Lexend', sans-serif;
+    background-color: #fdf2dc; 
+    color: #333;
+}
+
+.search-box-next .material-icons {
+    font-size: 28px; 
+    color: #333;
+    margin-right: 10px; 
+}
+
+/* Styling for Options Boxes */
+.options-container {
+    display: flex;
+    z-index: 1;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px; 
+}
+
+.options-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.option-box {
+    padding: 10px 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-box:hover {
+    background-color: #f1e4c3;
+}
+
+.searchbottom-image {
+    position: absolute;
+    top: 200px;
+    left: -900px;
+    transform: rotate(60deg); 
+    scale: 0.5;
+    opacity: 0.6;
+}
+
