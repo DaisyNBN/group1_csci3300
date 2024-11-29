@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareRecipe - Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="recipes.html" class="nav-link">Recipes</a>
+            <a href="about.html" class="nav-link">About</a>
+        </nav>
+    </header>
+    <main>
+        <section class="next-section" id="next-section">
+            <h2 class="next-section-title">Whatcha Hungry For? It’s Time for a Recipe Adventure</h2>
+            <div class="search-container">
+                <div class="search-box-next">
+                    <input type="text" id="recipe-search" placeholder="Search by name, ingredients, time, or budget">
+                    <button class="search-button" onclick="fetchRecipes()">Search</button>              
+                </div>
+            </div>
+        </section>
+        <section id="recipes-list" class="recipe-grid">
+            <!-- Recipe cards will be dynamically loaded here -->
+        </section>
+    </main>
+</body>
+</html>

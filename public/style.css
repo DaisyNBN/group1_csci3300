@@ -1,0 +1,246 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none!important;
+    list-style: none;
+    color: #ccccccb9!important;
+    background: none;
+    border: none;
+}
+a{
+}
+
+/* Body Styling */
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #151414;
+    color: #333;
+    overflow-x: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    width: 70vw;
+}
+
+/* Navigation Bar */
+.navigation {
+    display: flex;
+    width: 100vw;
+    color:  #151414!important;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #151414!important;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #c48b35;
+}
+
+/* Hero Section */
+.hero {
+    width: 100vw!important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(to top, #151414, #fdf2dc);
+    height: 70vh;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-title {
+    font-family: 'Sigmar One', cursive;
+    font-size: 48px;
+    color: #fff!important;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.get-started {
+    background-color: #c48b35;
+    color: #fff!important;
+    padding: 15px 30px;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.get-started:hover {
+    background-color: #a4742d;
+}
+
+.hero-image {
+    max-width: 55%;
+    max-height: 90%;
+}
+
+/* Next Section */
+.next-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.next-section-title {
+    font-family: 'Sigmar One', cursive;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-container-next {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.search-box-next {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+}
+
+.search-box-next input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    padding-left: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.search-box-next .material-icons {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Options Boxes */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.option-box {
+    padding: 10px 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.option-box:hover {
+    background-color: #f9dcb6;
+    transform: scale(1.1);
+}
+/* Recipe Grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Recipe Cards */
+
+.card-link{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #424242;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 12px;
+    transition: all .3s;
+    flex-shrink: 0;
+}
+
+.card-link:hover{
+    border: 1px solid #fff;
+    transform: scale(1.05);
+}
+
+.card-title{
+    color: #ffffffc8!important;
+}
+
+.search-button{
+    font-size: 16px;
+    color: #151414!important;  
+}
+/* About Page Styling */
+.about-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff5e6 !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-section h1 {
+    font-family: 'Sigmar One', cursive;
+    font-size: 36px;
+    color: #c48b35 !important;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    color: #c48b35 !important;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: black !important;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#recipe-search{
+    color: black !important;
+}
+
