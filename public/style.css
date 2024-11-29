@@ -3,19 +3,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none!important;
+    list-style: none;
+    color: #ccccccb9!important;
+    background: none;
+    border: none;
+}
+a{
 }
 
 /* Body Styling */
 body {
     font-family: 'Lexend', sans-serif;
-    background-color: #fdf2dc;
+    background-color: #151414;
     color: #333;
     overflow-x: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    width: 70vw;
 }
 
 /* Navigation Bar */
 .navigation {
     display: flex;
+    width: 100vw;
+    color:  #151414!important;
+    position: sticky;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -27,7 +45,7 @@ body {
 .nav-link {
     text-decoration: none;
     font-size: 18px;
-    color: #333;
+    color: #151414!important;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -38,11 +56,12 @@ body {
 
 /* Hero Section */
 .hero {
+    width: 100vw!important;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    background: linear-gradient(to bottom, #ffe5c3, #fdf2dc);
+    background: linear-gradient(to top, #151414, #fdf2dc);
     height: 70vh;
     position: relative;
 }
@@ -54,22 +73,23 @@ body {
 .hero-title {
     font-family: 'Sigmar One', cursive;
     font-size: 48px;
-    color: #333;
+    color: #fff!important;
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
     font-size: 20px;
-    color: #555;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 .get-started {
     background-color: #c48b35;
-    color: #fff;
+    color: #fff!important;
     padding: 15px 30px;
     border: none;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
@@ -89,7 +109,6 @@ body {
 /* Next Section */
 .next-section {
     padding: 40px 20px;
-    background-color: #fff5e6;
     text-align: center;
 }
 
@@ -162,56 +181,66 @@ body {
 }
 
 /* Recipe Cards */
-.recipe-card {
-    background-color: #fff;
-    border: 2px solid #ccc;
+
+.card-link{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #424242;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 12px;
+    transition: all .3s;
+    flex-shrink: 0;
+}
+
+.card-link:hover{
+    border: 1px solid #fff;
+    transform: scale(1.05);
+}
+
+.card-title{
+    color: #ffffffc8!important;
+}
+
+.search-button{
+    font-size: 16px;
+    color: #151414!important;  
+}
+/* About Page Styling */
+.about-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff5e6 !important;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.recipe-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.recipe-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.recipe-card-content {
-    padding: 15px;
     text-align: center;
 }
 
-.recipe-card-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+.about-section h1 {
+    font-family: 'Sigmar One', cursive;
+    font-size: 36px;
+    color: #c48b35 !important;
+    margin-bottom: 20px;
 }
 
-.recipe-card-description {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
+.about-section h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    color: #c48b35 !important;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
-.recipe-card-button {
-    background-color: #c48b35;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
+.about-section p {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: black !important;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.recipe-card-button:hover {
-    background-color: #a4742d;
+#recipe-search{
+    color: black !important;
 }
+

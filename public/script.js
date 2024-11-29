@@ -7,15 +7,18 @@ async function fetchRecipes() {
     recipesList.innerHTML = '';
 
     recipes.forEach(recipe => {
+        console.log(recipe);
+        
         const card = document.createElement("div");
         card.classList.add("recipe-card");
 
         card.innerHTML = `
-            <h3>${recipe.name}</h3>
-            <p>${recipe.description}</p>
-            <p><strong>Time:</strong> ${recipe.time}</p>
-            <p><strong>Budget:</strong> ${recipe.budget}</p>
-            <a href="${recipe.link}" target="_blank">View Recipe</a>
+            <a href="${recipe.link}" target="_blank" class="card-link" }>
+                    <h3 class="card-title">${recipe.name}</h3>
+                    <p>${recipe.description}</p>
+                    <p><strong class='card-subtitle'>Time:</strong> ${recipe.time}</p>
+                    <p><strong class='card-subtitle'>Budget:</strong> ${recipe.budget}</p>
+            <a/>
         `;
 
         recipesList.appendChild(card);
