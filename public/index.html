@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Fonts and External CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareRecipe - Home</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="recipes.html" class="nav-link">Recipes</a>
+            <a href="about.html" class="nav-link">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Budget-Friendly, No-Fuss Cooking</h1>
+            <p class="hero-subtitle">Recipes that work with your schedule and your budget</p>
+            <button class="get-started" onclick="scrollToNextSection()">Get Started</button>
+        </div>
+        <img src="images/main_search_bg.png" alt="Delicious Food Background" class="hero-image">
+    </section>
+
+    <!-- Next Section -->
+    <section class="next-section" id="next-section">
+        <h2 class="next-section-title">Whatcha Hungry For? It’s Time for a Recipe Adventure</h2>
+        <div class="search-container-next">
+            <div class="search-box-next">
+                <span class="material-icons">search</span>
+                <input type="text" id="next-section-search" placeholder="Search for ingredients...">
+            </div>
+        </div>
+        <div class="options-container" id="options-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
