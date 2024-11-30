@@ -1,0 +1,54 @@
+name: CI/CD
+
+# Trigger pipeline on branch pushes or pull requests
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest  # Use GitHub-hosted runner
+    
+    steps:
+      # Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run unit tests
+      - name: Run unit tests
+        run: npm test
+
+      # Archive artifacts (e.g., executables, config files)
+      - name: Archive build artifacts
+        if: success()
+        run: |
+          mkdir -p artifacts
+          cp -r data artifacts/
+          cp -r public artifacts/
+        # Upload artifacts to GitHub
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: project-artifacts
+          path: artifacts/
+
+      - name: Check build
+        run: |
+          if [ ! -f artifacts/data/all_recipes_dataset.csv ]; then
+            echo "Build artifact missing: all_recipes_dataset.csv" && exit 1;
+          fi
