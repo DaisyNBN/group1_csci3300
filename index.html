@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Other meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background and Main Styling */
+        body {
+            font-family: 'Lexend', sans-serif; 
+            color: #333; 
+            background-color: #fdf2dc; 
+            overflow-x: hidden;
+        }
+
+        /* Main Container Styling */
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px; 
+
+        }
+
+        /* Search Bar Styling */
+        .search-container {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 5px 10px;
+            width: 300px;
+            font-family: 'Lexend', sans-serif; 
+        }
+
+        .material-icons {
+            font-size: 24px; 
+            color: #333;
+            margin-right: 8px; 
+        }
+
+        .search-box input[type="text"] {
+            border: none;
+            outline: none;
+            font-size: 18px;
+            flex-grow: 1;
+            font-family: 'Lexend', sans-serif; 
+        }
+
+        /* Main Tagline Styling */
+        .tagline {
+            font-family: 'Sigmar One', cursive; 
+            font-weight: bold;
+            font-size: 36px; 
+            margin: 40px 0 10px;
+            margin-top: 100px;
+        }
+
+        .subtagline {
+            font-family: 'Lexend', sans-serif;
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        /* Get Started Button Styling */
+        .get-started {
+            background-color: #c48b35; 
+            color: #333;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Lexend', sans-serif; 
+            
+        }
+
+        .get-started:hover {
+            background-color: #a4742d;
+        }
+
+        /* Next Section Styling */
+        .next-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fdf2dc;
+            font-size: 24px;
+            font-family: 'Lexend', sans-serif; 
+        }
+
+        /* Bottom Image Styling */
+        .bottom-image {
+            bottom: 50px;
+            width: 100%;
+            margin-top:0;
+            
+          
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container (First Page) -->
+    <div class="container">
+        <!-- Search Bar on Left Side -->
+        <div class="search-container">
+            <div class="search-box">
+                <span class="material-icons">search</span> <!-- Icon in the search bar -->
+                <input type="text" placeholder="Search for recipes...">
+            </div>
+        </div>
+
+        <!-- Centered Content -->
+        <div class="tagline">Budget-Friendly, No-Fuss Cooking</div>
+        <div class="subtagline">Recipes that work with your schedule and your budget</div>
+
+        <button class="get-started" onclick="scrollToNextSection()">Get Started</button>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="food_bg.png" alt="Delicious Food" class="bottom-image">
+
+    <!-- Next Section -->
+    <div class="next-section" id="next-section">
+        Add search bar in this one. Search from this will go to another page displaying recipes based on key words
+    </div>
+
+    <script>
+        // JavaScript function to scroll to the next section
+        function scrollToNextSection() {
+            document.getElementById("next-section").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+</html>
