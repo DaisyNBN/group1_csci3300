@@ -28,7 +28,15 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm install
-
+        
+      # Explicitly install Jest
+      - name: Install Jest
+        run: npm install jest --save-dev
+        
+      # Grant permissions to Jest binary
+      - name: Fix Jest permissions
+        run: chmod +x ./node_modules/.bin/jest
+        
       # Run unit tests
       - name: Run unit tests
         run: npx jest
