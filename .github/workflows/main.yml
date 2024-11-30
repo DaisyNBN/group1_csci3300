@@ -31,7 +31,7 @@ jobs:
 
       # Run unit tests
       - name: Run unit tests
-        run: npm test
+        run: npx jest
 
       # Archive artifacts (e.g., executables, config files)
       - name: Archive build artifacts
