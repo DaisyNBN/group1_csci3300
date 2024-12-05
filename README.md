@@ -21,17 +21,20 @@ The ShareRecipe system is built on a client-server model with the following laye
    ```bash
    git clone <repo-url>
 2. Navigate to the project directory:
+    ```bash
    cd group1_csci3300
    
 3. Install dependencies:
+   ```bash
    npm install
    
 4. Start the server:
+   ```bash
    node server.js
 
----
 ## Diagrams
-### 1. **Folder Structure**
+
+### 1. Folder Structure
 ```mermaid
 graph TD
 A[Root Directory] --> B[public/]
@@ -43,8 +46,8 @@ B --> G[style.css]
 B --> H[script.js]
 B --> I[images/]
 C --> J[recipes.csv]
-
 ```
+
 ### 2. ** System Architecture
 ```mermaid
 graph TD
@@ -64,3 +67,10 @@ CSV-->>Server: Recipe data
 Server-->>Browser: Recipe JSON
 Browser-->>User: Display recipes
 ```
+
+### Explanation of Diagrams
+1. **Folder Structure Diagram**: Visualizes how files and folders are organized in the project.
+2. **System Architecture Diagram**: Illustrates the relationship between the user, frontend, backend, and database.
+3. **Request Flow Diagram**: Shows the flow of a user request from the frontend to the backend, including the processing of the CSV file.
+
+These diagrams provide a clear and structured overview of your project. Let me know if you need further modifications or additional details!
