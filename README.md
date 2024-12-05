@@ -1,102 +1,60 @@
-ShareRecipe
-ShareRecipe is a web-based platform designed to help users find recipes based on the ingredients they already have at home. The application is built with Node.js for the backend, HTML/CSS/JavaScript for the frontend, and CSV files as the data source.
-
-Features
-Search recipes by ingredients.
-Browse categorized recipes (breakfast, lunch, dinner, etc.).
-Lightweight and fast with a simple CSV-based data source.
-Folder Structure
-perl
-Copy code
-group1_csci3300/
-├── data/                  # Contains CSV files storing recipe data
-├── node_modules/          # Stores project dependencies
-├── public/                # Frontend assets (HTML, CSS, JS, images)
-│   ├── about.html         # About page
-│   ├── index.html         # Homepage
-│   ├── recipes.html       # Recipes listing page
-│   ├── script.js          # Handles frontend interactions
-│   ├── style.css          # CSS styles
-│   └── images/            # Images used in the UI
-├── tests/                 # Test scripts for validation
-├── server.js              # Backend server file
-├── package.json           # Node.js dependencies and scripts
-├── package-lock.json      # Dependency lock file
-└── README.md              # Project documentation
-System Requirements
-Operating System: Windows, macOS, or Linux
-Memory: Minimum 4GB
-Storage: 200MB for the application + data storage
-Node.js Version: 16 or later
-Setup and Installation
-Prerequisites
-Node.js (Version 16 or later)
-npm (Node Package Manager)
-Steps to Run
-Clone the repository:
-bash
-Copy code
-git clone <repo-url>
-Navigate to the project directory:
-bash
-Copy code
-cd group1_csci3300
-Install dependencies:
-Copy code
-npm install
-Start the server:
-Copy code
-node server.js
-Open http://localhost:3000 in your browser to access the application.
-Application Architecture
-Frontend
-Built using HTML, CSS, and JavaScript.
-Pages include:
-index.html: The homepage with a search bar for ingredients.
-about.html: Information about the platform.
-recipes.html: Displays filtered recipes.
-Backend
-Developed with Node.js and Express.js.
-Key functionality:
-Reads and processes data from the recipes.csv file in the data/ folder.
-Handles routes:
-/: Serves the homepage.
-/recipes: Fetches recipes based on user-provided ingredients.
-Database
-CSV File (data/recipes.csv):
-Stores recipe data including:
-Recipe name
-Ingredients
-Cooking instructions
-Category (e.g., breakfast, lunch, dinner)
-Workflow
-Request Flow
-User inputs ingredients on the homepage.
-The input is sent to the backend via a GET request.
-The backend reads the recipes.csv file, filters the recipes, and returns matching results as JSON.
-The frontend dynamically displays the recipes to the user.
-Diagrams
-1. Folder Structure
-kotlin
-Copy code
-group1_csci3300/
-├── public/
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-│   ├── images/
-├── data/
-│   ├── recipes.csv
-├── server.js
-2. System Architecture
-rust
-Copy code
-User -> Browser [Frontend (HTML/JS/CSS)] -> Backend (Node.js Server) -> Data (recipes.csv)
-3. Request Flow
-rust
-Copy code
-User -> Browser -> GET /recipes?ingredients=<ingredients> -> Server -> CSV -> Server -> Browser -> User
-Future Enhancements
-Migrate data storage from CSV files to a relational database (e.g., MySQL).
-Add user authentication for saving favorite recipes.
-Expand search capabilities with filtering by preparation time and dietary preferences.
+# High-Level Design Document for ShareRecipe
+## Introduction
+ShareRecipe is a platform for finding recipes based on available ingredients. The goal is to simplify meal preparation for users with limited time and resources. This document outlines the architecture and major components of the system.
+---
+## Architecture Overview
+The ShareRecipe system is built on a client-server model with the following layers:
+1. **Frontend (React + TypeScript)**:
+   - User interface for searching and displaying recipes.
+   - Input forms for adding personal recipes.
+   - Interfaces for recipe ratings and reviews.
+2. **Backend (Express.js)**:
+   - RESTful APIs to handle user requests.
+   - Database communication for storing and retrieving data.
+   - Middleware for user authentication and input validation.
+3. **Database (MySQL or MongoDB)**:
+   - Stores recipe details, user data, and reviews.
+   - Optimized with indexes for efficient searches.
+4. **External Libraries**:
+   - `bcrypt` for password hashing.
+   - `jsonwebtoken` for user authentication.
+   - `Axios` for API calls between frontend and backend.
+---
+## Component Breakdown
+### Frontend
+- **Main Components**:
+  - `SearchBar`: Handles user input for searching recipes.
+  - `RecipeList`: Displays a list of recipes.
+  - `RecipeDetails`: Shows detailed recipe instructions and ratings.
+  - `UserAccount`: Manages user profiles and saved recipes.
+### Backend
+- **API Endpoints**:
+  - `/recipes/search`: Returns recipes matching ingredients.
+  - `/recipes/:id`: Fetches details of a specific recipe.
+  - `/users/register`: Handles new user registration.
+  - `/users/login`: Authenticates users.
+- **Middleware**:
+  - `authMiddleware`: Ensures protected routes are accessed by authenticated users only.
+---
+## Diagrams
+### 1. **System Architecture**
+```mermaid
+graph TD
+A[User] --> B[Frontend]
+B --> C[Backend]
+C --> D[Database]
+```
+### 2. ** Frontend Component Hierarchy
+graph TD
+Root --> SearchBar
+Root --> RecipeList
+Root --> RecipeDetails
+Root --> UserAccount
+### 3. **
+sequenceDiagram
+User->>Frontend: Search query
+Frontend->>Backend: GET /recipes/search
+Backend->>Database: SQL Query
+Database->>Backend: Recipe Data
+Backend->>Frontend: Recipe JSON
+Frontend->>User: Display results
