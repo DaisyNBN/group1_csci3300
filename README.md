@@ -48,7 +48,7 @@ B --> I[images/]
 C --> J[recipes.csv]
 ```
 
-### 2. ** System Architecture
+### 2. System Architecture
 ```mermaid
 graph TD
 User --> Browser[Frontend (HTML/JS/CSS)]
@@ -57,7 +57,8 @@ Backend --> CSV[Data Folder (recipes.csv)]
 CSV --> Backend
 Backend --> Browser
 ```
-### 3. ** Request Flow
+
+### 3. Request Flow
 ```mermaid
 sequenceDiagram
 User->>Browser: Input ingredients
