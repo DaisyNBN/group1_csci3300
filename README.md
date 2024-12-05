@@ -56,15 +56,15 @@ B --> C[Backend]
 C --> D[Database]
 ```
 ### 2. ** Frontend Component Hierarchy
-
+```mermaid
 graph TD
 Root --> SearchBar
 Root --> RecipeList
 Root --> RecipeDetails
 Root --> UserAccount
-
-### 3. **
-
+```
+### 3. ** API Flow
+```mermaid
 sequenceDiagram
 User->>Frontend: Search query
 Frontend->>Backend: GET /recipes/search
@@ -72,3 +72,4 @@ Backend->>Database: SQL Query
 Database->>Backend: Recipe Data
 Backend->>Frontend: Recipe JSON
 Frontend->>User: Display results
+```
