@@ -48,17 +48,8 @@ B --> I[images/]
 C --> J[recipes.csv]
 ```
 
-### 2. System Architecture
-```mermaid
-graph TD
-User --> Browser[Frontend (HTML/JS/CSS)]
-Browser --> Backend[Node.js Server]
-Backend --> CSV[Data Folder (recipes.csv)]
-CSV --> Backend
-Backend --> Browser
-```
 
-### 3. Request Flow
+### 2. Request Flow
 ```mermaid
 sequenceDiagram
 User->>Browser: Input ingredients
